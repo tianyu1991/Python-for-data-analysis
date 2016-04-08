@@ -54,3 +54,4 @@ np.savez('array_archive.npz', a=arr, b=arr)  ##save multiple arrays
 np.loadtxt('array_ex.txt', delimiter=',')
 x.dot(y)  ##Matrix multiplication
 
+np.where(pd.isnull(a), b, a) ## a==nan, then b. else: a
