@@ -107,3 +107,13 @@ frame = DataFrame(np.arange(12).reshape((4, 3)),
 frame2 = frame.set_index(['c', 'd'], drop=False)##use col c, d as hierarchical index, By default the columns are removed from the DataFrame
 frame2.reset_index()  ## the hierarchical index move back to col
        
+data.drop_duplicates()
+data.replace({-999: np.nan, -1000: 0})##dict
+data.replace([-999, -1000], [np.nan, 0])
+data.rename(index={'OHIO': 'INDIANA'}, columns={'three': 'peekaboo'})
+
+###Discretization and Binning
+pd.cut(ages, [18, 26, 36, 61, 100], labels=['Youth', 'YoungAdult', 'MiddleAged', 'Senior'],right=False)
+data = np.random.rand(20)
+pd.cut(data, 4, precision=2)##a integer number of bins instead of explicit bin edges
+pd.qcut(data, 4) # Cut into quartiles
