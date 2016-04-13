@@ -1,2 +1,2 @@
-# Python-for-data-analysis
+# Python for data analysis
 #python
