@@ -1,4 +1,5 @@
 #NumPy
+##N-dimensional array object
 data = [[1, 2, 3, 4], [5, 6, 7, 8],dtype=int64]
 ##int8,int16,int32,int64,float16,...float128,complex64,128,256,bool,object,string_,unicode_
 arr = np.array(data)
@@ -55,3 +56,9 @@ np.loadtxt('array_ex.txt', delimiter=',')
 x.dot(y)  ##Matrix multiplication
 
 np.where(pd.isnull(a), b, a) ## a==nan, then b. else: a
+
+##Hierarchical Indexing
+data = Series(np.random.randn(10), index=[['a', 'a', 'a', 'b', 'b', 'b', 'c', 'c', 'd', 'd'], [1, 2, 3, 1, 2, 3, 1, 2, 2, 3]])
+
+data['b':'c']
+data.ix[['b', 'd']]
