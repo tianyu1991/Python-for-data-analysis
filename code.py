@@ -105,3 +105,15 @@ fig, axes = plt.subplots(2, 1, figsize=(10, 8))
 letter_prop['M'].plot(kind='bar', rot=0, ax=axes[0], title='Male')
 letter_prop['F'].plot(kind='bar', rot=0, ax=axes[1], title='Female',
  legend=False)
+
+
+'Hello, %s' % 'world'
+##'Hello, world'
+'Hi, %s, you have $%d.' % ('Michael', 1000000)
+##'Hi, Michael, you have $1000000.'
+'%.2f' % 3.1415926
+##'3.14'
+##%d	int
+##%f	float
+##%s	str
+##%x	int(16)
